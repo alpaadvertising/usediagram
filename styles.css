@@ -1,0 +1,92 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #d15a28; /* Orange */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+}
+
+/* Use Case Section */
+.use-case {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.use-case h2 {
+    color: #006d4e; /* Dark Teal */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Use Case Box */
+.diagram-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: #006d4e; /* Dark Teal */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actor {
+    flex: 1;
+    background-color: #d15a28; /* Orange */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actor h3 {
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.use-case-details {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.use-case-details h3 {
+    color: #006d4e; /* Dark Teal */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.use-case-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.use-case-details ul li {
+    padding: 5px;
+    font-size: 1.2em;
+}
