@@ -1,52 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Use Case Diagram</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+<style>
+body {
+  background-color: #FFA500; /* Orange background */
+  font-family: sans-serif;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.actor {
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+.usecase {
+  position: relative;
+  top: 100px;
+  left: 300px;
+}
+
+.line {
+  position: absolute;
+  top: 120px;
+  left: 150px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+
+.line2 {
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+
+.line3 {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+
+.line4 {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+
+.line5 {
+  position: absolute;
+  top: 300px;
+  left: 150px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+
+.line6 {
+  position: absolute;
+  top: 120px;
+  left: 450px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+
+.line7 {
+  position: absolute;
+  top: 150px;
+  left: 500px;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+
+.line8 {
+  position: absolute;
+  top: 200px;
+  left: 450px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+
+.line9 {
+  position: absolute;
+  top: 250px;
+  left: 500px;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+
+.line10 {
+  position: absolute;
+  top: 300px;
+  left: 450px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+
+.line11 {
+  position: absolute;
+  top: 350px;
+  left: 500px;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+
+.line12 {
+  position: absolute;
+  top: 400px;
+  left: 450px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+
+.line13 {
+  position: absolute;
+  top: 450px;
+  left: 500px;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+
+.line14 {
+  position: absolute;
+  top: 500px;
+  left: 450px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+
+.line15 {
+  position: absolute;
+  top: 550px;
+  left: 500px;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+
+.line16 {
+  position: absolute;
+  top: 600px;
+  left: 450px;
+  width: 150px;
+  height: 2px;
+  background-color: black;
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>Use Case Diagram</h1>
-    </header>
+<div class="container">
+  <div class="actor">
+    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:50px;height:50px;">
+    <p>Medical receptionist</p>
+  </div>
 
-    <div class="content">
-        <section class="use-case">
-            <h2>System Use Case</h2>
-            <div class="diagram-box">
-                <div class="actor">
-                    <h3><a href="#user-authentication">User</a></h3>
-                    <p><a href="#user-authentication">User interacts with the system</a> to authenticate, search content, and access features.</p>
-                </div>
-                <div class="use-case-details">
-                    <h3>Use Cases:</h3>
-                    <ul>
-                        <li><a href="#user-authentication">User Authentication</a></li>
-                        <li><a href="#search-functionality">Search Functionality</a></li>
-                        <li><a href="#access-content">Access Content</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Links to specific sections for use cases -->
-        <section id="user-authentication">
-            <h3>User Authentication</h3>
-            <p>This involves the login system where users enter their credentials for authentication. If valid, the user is granted access to the system.</p>
-        </section>
-        
-        <section id="search-functionality">
-            <h3>Search Functionality</h3>
-            <p>Users can search for content based on their needs. This includes auto-suggestions and filters to refine results.</p>
-        </section>
-        
-        <section id="access-content">
-            <h3>Access Content</h3>
-            <p>Once authenticated, users are able to access and interact with the content available on the platform.</p>
-        </section>
+  <div class="usecase">
+    <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
+      <p>Register patient</p>
     </div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="actor" style="top: 200px; left: 100px;">
+    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:50px;height:50px;">
+    <p>Nurse</p>
+  </div>
+
+  <div class="usecase" style="top: 200px; left: 300px;">
+    <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
+      <p>View record</p>
+    </div>
+  </div>
+
+  <div class="line2"></div>
+
+  <div class="usecase" style="top: 250px; left: 300px;">
+    <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
+      <p>Edit record</p>
+    </div>
+  </div>
+
+  <div class="line3"></div>
+
+  <div class="usecase" style="top: 300px; left: 300px;">
+    <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
+      <p>Setup consultation</p>
+    </div>
+  </div>
+
+  <div class="line4"></div>
+
+  <div class="usecase" style="top: 150px; left: 300px;">
+    <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
+      <p>View personal info.</p>
+    </div>
+  </div>
+
+  <div class="line5"></div>
+
+  <div class="actor" style="top: 100px; left: 500px;">
+    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:50px;height:50px;">
+    <p>Manager</p>
+  </div>
+
+  <div class="usecase" style="top: 100px; left: 700px;">
+    <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
+      <p>Export statistics</p>
+    </div>
+  </div>
+
+  <div class="line6"></div>
+
+  <div class="usecase" style="top: 150px; left: 700px;">
+    <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
+      <p>Generate report</p>
+    </div>
+  </div>
+
+  <div class="line7"></div>
+
+  <div class="actor" style="top: 200px; left: 500px;">
+    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:50px;height:50px;">
+    <p>Doctor</p>
+  </div>
+
+  <div class="line8"></div>
+
+  <div class="line9"></div>
+
+  <div class="line10"></div>
+
+  <div class="line11"></div>
+
+  <div class="line12"></div>
+
+  <div class="line13"></div>
+
+  <div class="line14"></div>
+
+  <div class="line15"></div>
+
+  <div class="line16"></div>
+
+  <p style="position: absolute; bottom: 10px; left: 10px;">Module 4 Requirements Engineering</p>
+
+</div>
 
 </body>
 </html>
