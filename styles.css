@@ -66,6 +66,17 @@ h1 {
     margin-bottom: 10px;
 }
 
+.actor a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4em;
+    transition: color 0.3s ease;
+}
+
+.actor a:hover {
+    color: #ffcc00; /* Yellow on hover */
+}
+
 .use-case-details {
     flex: 1;
     padding: 20px;
@@ -89,4 +100,35 @@ h1 {
 .use-case-details ul li {
     padding: 5px;
     font-size: 1.2em;
+}
+
+.use-case-details ul li a {
+    color: #006d4e; /* Dark Teal */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.use-case-details ul li a:hover {
+    color: #ffcc00; /* Yellow on hover */
+}
+
+/* Section for Detailed Information about each Use Case */
+section {
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+    color: #006d4e; /* Dark Teal */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
 }
