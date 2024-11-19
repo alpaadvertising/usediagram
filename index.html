@@ -3,55 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Model - Use Case Diagram</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>System Model - Use Case and Activity Diagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6f0; /* Light background */
+            color: #333;
+        }
+        header {
+            background-color: #ff7043; /* Orange */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #e0f2f1; /* Dark Teal */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .mermaid {
+            margin-top: 30px;
+            width: 100%;
+            height: 400px;
+            background-color: #ffffff;
+            border: 2px solid #00796b; /* Teal border */
+            border-radius: 8px;
+            padding: 20px;
+        }
+    </style>
+    <!-- Add Mermaid.js Library -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({startOnLoad:true});
+    </script>
 </head>
 <body>
     <header>
-        <h1>System Model - Use Case Diagram</h1>
+        <h1>System Model - Use Case and Activity Diagram</h1>
     </header>
-    <main>
+    <div class="container">
+        <!-- Use Case Diagram Section (existing code) -->
         <div class="diagram">
-            <!-- Actor -->
-            <div class="actor">
-                <div class="actor-icon">👤</div>
-                <p>User</p>
-            </div>
-
-            <!-- Use Cases -->
-            <div class="use-cases">
-                <div class="use-case">
-                    <a href="#authenticate" class="use-case-link">Authenticate</a>
-                </div>
-                <div class="use-case">
-                    <a href="#search" class="use-case-link">Search Content</a>
-                </div>
-                <div class="use-case">
-                    <a href="#access" class="use-case-link">Access Features</a>
-                </div>
-            </div>
-
-            <!-- System Boundary -->
-            <div class="system-boundary">
-                <h2>System Boundary</h2>
-                <p>Handles all user interactions and processes.</p>
-            </div>
+            <div class="node">User</div>
+            <div class="line"></div>
+            <div class="node" onclick="showDetails('auth')">User Authentication</div>
+            <div class="line"></div>
+            <div class="node" onclick="showDetails('search')">Search Content</div>
+            <div class="line"></div>
+            <div class="node" onclick="showDetails('features')">Access Features</div>
         </div>
-    </main>
 
-    <section id="authenticate" class="details-section">
-        <h2>User Authentication</h2>
-        <p>Allows users to securely log in or register. Includes multi-factor authentication and password recovery options.</p>
-    </section>
+        <!-- Activity Diagram Section -->
+        <div class="mermaid">
+            graph TD;
+                A[User Login] --> B[Authenticate User];
+                B --> C{Is Valid?};
+                C -->|Yes| D[Redirect to Dashboard];
+                C -->|No| E[Show Error Message];
+                E --> B;
+                D --> F[Search Content];
+                F --> G[Enter Search Term];
+                G --> H[Display Results];
+                H --> I[Access Features];
+                I --> J[Show Content or Tools];
+                J --> K[End];
+        </div>
+    </div>
 
-    <section id="search" class="details-section">
-        <h2>Search Content</h2>
-        <p>Provides a search bar with filters, auto-suggestions, and quick results for relevant content.</p>
-    </section>
-
-    <section id="access" class="details-section">
-        <h2>Access Features</h2>
-        <p>Grants users the ability to interact with features based on their roles and access level.</p>
-    </section>
+    <script>
+        function showDetails(type) {
+            const details = {
+                auth: "User Authentication enables secure login, registration, and role-based access.",
+                search: "Search Functionality provides filters and quick content discovery.",
+                features: "Access Features includes secure access to system tools and data."
+            };
+            alert(details[type]);
+        }
+    </script>
 </body>
 </html>
