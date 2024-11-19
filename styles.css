@@ -1,134 +1,122 @@
-/* General Styling */
+/* General Reset and Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-/* Header */
 header {
     background-color: #d15a28; /* Orange */
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+    color: white;
 }
 
-h1 {
-    color: #fff;
-    font-size: 2.5em;
+header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
-/* Content Section */
-.content {
+/* Diagram Styling */
+.diagram {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
     padding: 20px;
+    width: 80%;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
 }
 
-/* Use Case Section */
-.use-case {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.use-case h2 {
-    color: #006d4e; /* Dark Teal */
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-/* Use Case Box */
-.diagram-box {
-    display: flex;
-    justify-content: space-between;
-    background-color: #006d4e; /* Dark Teal */
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
+/* Actor Styling */
 .actor {
-    flex: 1;
+    text-align: center;
+}
+
+.actor-icon {
+    font-size: 3em;
+    color: #006d4e; /* Dark Teal */
+}
+
+.actor p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Use Cases Styling */
+.use-cases {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.use-case {
+    background-color: #006d4e; /* Dark Teal */
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.use-case:hover {
+    transform: scale(1.1);
     background-color: #d15a28; /* Orange */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.actor h3 {
-    color: #fff;
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-
-.actor a {
-    color: #fff;
+.use-case-link {
     text-decoration: none;
-    font-size: 1.4em;
-    transition: color 0.3s ease;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-.actor a:hover {
-    color: #ffcc00; /* Yellow on hover */
-}
-
-.use-case-details {
-    flex: 1;
+/* System Boundary */
+.system-boundary {
+    grid-column: span 3;
+    text-align: center;
+    margin-top: 20px;
     padding: 20px;
-    background-color: #fff;
-    color: #333;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
+    border: 2px dashed #d15a28; /* Orange */
+    border-radius: 10px;
 }
 
-.use-case-details h3 {
-    color: #006d4e; /* Dark Teal */
+.system-boundary h2 {
+    color: #d15a28;
+    margin: 0;
     font-size: 1.5em;
+}
+
+.system-boundary p {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Details Section Styling */
+.details-section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-section h2 {
+    color: #006d4e; /* Dark Teal */
     margin-bottom: 10px;
 }
 
-.use-case-details ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.use-case-details ul li {
-    padding: 5px;
-    font-size: 1.2em;
-}
-
-.use-case-details ul li a {
-    color: #006d4e; /* Dark Teal */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.use-case-details ul li a:hover {
-    color: #ffcc00; /* Yellow on hover */
-}
-
-/* Section for Detailed Information about each Use Case */
-section {
-    padding: 20px;
-    margin-top: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-section h3 {
-    color: #006d4e; /* Dark Teal */
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #333;
+.details-section p {
+    line-height: 1.5;
+    font-size: 1em;
 }
