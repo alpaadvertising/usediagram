@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Model - Activity Diagram</title>
+    <title>System Model - Architecture Diagram</title>
     <style>
         /* General body styles */
         body {
@@ -36,30 +36,18 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Use Case Diagram Section */
-        .use-case-container {
+        /* Architecture Diagram Section */
+        .diagram-container {
             width: 100%;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
         }
-        
-        .use-case-container .node {
-            margin: 20px;
-            padding: 10px 20px;
-            background-color: #ff7043; /* Orange */
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-block;
-            font-size: 1.1em;
-        }
-        
-        .use-case-container .line {
-            display: inline-block;
-            height: 2px;
-            width: 50px;
-            background-color: #00796b; /* Dark Teal */
-            margin: 10px;
+
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Mermaid diagram styles */
@@ -84,36 +72,26 @@
             .mermaid {
                 padding: 10px;
             }
-            .use-case-container .node {
-                font-size: 1em;
-                padding: 8px 15px;
-            }
         }
     </style>
-    
-    <!-- Add Mermaid.js Library -->
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({startOnLoad:true});
-    </script>
 </head>
 <body>
     <header>
-        <h1>System Model - Activity Diagram</h1>
+        <h1>System Model - Architecture Diagram</h1>
     </header>
     
     <div class="container">
-        <!-- Use Case Diagram Section -->
-        <div class="use-case-container">
-            <h2>User Interactions</h2>
-            <div class="node" onclick="showDetails('auth')">User Authentication</div>
-            <div class="line"></div>
-            <div class="node" onclick="showDetails('search')">Search Content</div>
-            <div class="line"></div>
-            <div class="node" onclick="showDetails('features')">Access Features</div>
+        <!-- Architecture Diagram Section -->
+        <div class="diagram-container">
+            <h2>System Architecture</h2>
+            <p>Here is the visual representation of the system architecture:</p>
+            <!-- Replace with your uploaded image URL -->
+            <div class="architecture-diagram">
+                <img src="https://github.com/your-username/your-repository/blob/main/images/architecture-diagram.png?raw=true" alt="Architecture Diagram">
+            </div>
         </div>
 
-        <!-- Activity Diagram Section -->
+        <!-- Optionally, add a Mermaid Diagram if needed -->
         <div class="mermaid">
             graph TD;
                 A[User Login] --> B[Authenticate User];
@@ -129,16 +107,5 @@
                 J --> K[End];
         </div>
     </div>
-
-    <script>
-        function showDetails(type) {
-            const details = {
-                auth: "User Authentication enables secure login, registration, and role-based access.",
-                search: "Search Functionality provides filters and quick content discovery.",
-                features: "Access Features includes secure access to system tools and data."
-            };
-            alert(details[type]);
-        }
-    </script>
 </body>
 </html>
